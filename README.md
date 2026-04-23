@@ -7,7 +7,7 @@ This is my personal Neovim setup based on [LazyVim](https://www.lazyvim.org/), f
 - Java LSP: [jdtls](https://github.com/eclipse-jdtls/eclipse.jdt.ls) via [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls)
 - Debug: [nvim-dap](https://github.com/mfussenegger/nvim-dap) + java-debug-adapter
 - Fuzzy finder: [Snacks picker](https://github.com/folke/snacks.nvim)
-- Languages: Java, Kotlin, Python, Ruby, TypeScript, JavaScript, Elixir, Erlang, Clojure, SQL, Terraform, YAML, JSON, Docker, Markdown, Shell
+- Languages: Java, Kotlin, Go, Python, Ruby, TypeScript, JavaScript, Elixir, Clojure, SQL, Terraform, YAML, JSON, Docker, Markdown, Shell
 
 ---
 
@@ -24,7 +24,7 @@ brew install ripgrep
 brew install fd
 brew install lazygit
 brew install openjdk@21
-brew install rebar3
+brew install go
 ```
 
 ### Java Setup
@@ -45,22 +45,16 @@ alias jdk21='export JAVA_HOME=`/usr/libexec/java_home -v 21.0`'
 
 Always run `jdk21` before opening Neovim for Java development.
 
-### Erlang Setup (for erlang-ls)
+### Go Setup
 
-If you use [asdf](https://asdf-vm.com/) to manage Erlang versions, make sure to set a global version so `escript` is available system-wide:
-
-```bash
-asdf install erlang 28.4.2
-asdf global erlang 28.4.2
-echo "erlang 28.4.2" >> ~/.tool-versions
-```
-
-Verify it works:
+Make sure Go is installed and available in your `PATH`:
 
 ```bash
-escript --version
-# Expected: escript: Missing filename (this is correct — it means escript is available)
+brew install go
+go version
 ```
+
+The LazyVim Go extra will automatically install `gopls`, `gofumpt` and `goimports` via Mason.
 
 ### Installation
 
