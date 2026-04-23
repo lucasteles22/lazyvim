@@ -5,6 +5,9 @@ return {
       ensure_installed = {
         "java-debug-adapter",
         "java-test",
+        "bash-language-server",
+        "shellcheck",
+        "shfmt",
       },
     },
   },
