@@ -10,3 +10,6 @@ vim.opt.listchars = {
 }
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+-- Desabilitar formatação automática ao salvar
+vim.g.autoformat = false
