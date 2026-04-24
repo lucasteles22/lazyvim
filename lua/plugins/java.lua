@@ -2,15 +2,18 @@ return {
   {
     "mfussenegger/nvim-jdtls",
     opts = {
+      -- Mais memória para projetos grandes
+      cmd = {
+        "jdtls",
+        "--jvm-arg=-Xmx2G",
+        "--jvm-arg=-Xms256m",
+      },
       settings = {
         java = {
-          -- Build
           autobuild = { enabled = true },
           configuration = {
             updateBuildConfiguration = "automatic",
           },
-
-          -- Completion
           completion = {
             enabled = true,
             importOrder = {
@@ -20,26 +23,16 @@ return {
               "#",
             },
           },
-
-          -- Format
           format = { enabled = true },
-
-          -- Type hierarchy
           typeHierarchy = { lazyLoad = true },
-
-          -- Null analysis
           compile = {
             nullAnalysis = { mode = "automatic" },
           },
-
-          -- Lombok
           jdt = {
             ls = {
               lombokSupport = { enabled = true },
             },
           },
-
-          -- Debug
           debug = {
             settings = {
               forceBuildBeforeLaunch = false,

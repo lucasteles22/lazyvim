@@ -13,3 +13,6 @@ vim.opt.relativenumber = true
 
 -- Desabilitar formatação automática ao salvar
 vim.g.autoformat = false
+
+-- Guia visual de colunas
+vim.opt.colorcolumn = "120"

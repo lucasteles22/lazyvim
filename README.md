@@ -73,6 +73,8 @@ nvim  # opens and installs everything automatically
 - Format Java files: always use `<leader>cf` instead of `=` to properly handle chained methods
 - Press `<leader>` and wait 1 second — **which-key** will show all available keymaps on screen
 - Search for any keymap: `<leader>sk`
+- A vertical guide line is set at column 120 (`colorcolumn`) to help keep lines within a readable length
+- jdtls is configured with 2GB max heap (`-Xmx2G`) for better performance on large projects
 
 ---
 
