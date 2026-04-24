@@ -8,3 +8,5 @@ vim.opt.listchars = {
   tab = "» ",
   nbsp = "␣",
 }
+vim.opt.number = true
+vim.opt.relativenumber = true
