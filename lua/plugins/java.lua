@@ -2,12 +2,6 @@ return {
   {
     "mfussenegger/nvim-jdtls",
     opts = {
-      -- Mais memória para projetos grandes
-      cmd = {
-        "jdtls",
-        "--jvm-arg=-Xmx2G",
-        "--jvm-arg=-Xms256m",
-      },
       settings = {
         java = {
           autobuild = { enabled = true },
@@ -43,3 +37,4 @@ return {
     },
   },
 }
+
